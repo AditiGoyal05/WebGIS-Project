@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+body{
+   text-align: center;
+   background-color: rgba(128, 128, 128, 0.164);
+}
+.size {
+    width: 300px;
+    height: 300px;
+}
+.size2 {
+    width: 800px;
+    height: 300px;
+}
+.size3{
+    width: 450px;
+    height: 350px;
+}
+.box{
+    text-align: justify;
+    font-size:17px;
+    line-height: 25px;
+    letter-spacing: 1.5px;
+    color:whitesmoke;
+}
+.states{
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #0787989f;
+}
+.heading{
+    color: #078898;
+}
+.largeHeading{
+    font-size: 33px;
+}
+.smallHeading{
+    font-size: 25px;
+    padding: 7px;
+}
+.map{
+    margin: 15px;
+    border-radius: 250px;
+}
+.color{
+    background-color: #07879891;
+    padding: 15px;
+}
+.color1{
+    background-color: rgba(255, 166, 0, 0.397);
+    color:rgba(255, 166, 0, 0) ;
+    animation-name: div1;
+    animation-duration: 4s;
+}
+.color2{
+    background-color: rgba(255, 255, 255, 0.438);
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.color3{
+    background-color: rgba(0, 128, 0, 0.322);
+    color:rgba(0, 128, 0, 0) ;
+    animation-name: div3;
+    animation-duration: 4s;
+}
+.round{
+    border-radius: 50%;
+    border: solid rgba(0, 0, 255, 0.418) 2px;
+    padding: 15px;
+}
+@keyframes div1{
+     0%   { width:0px;}
+  100% { width:100%;}
+}
+@keyframes div3{
+    0%   { width:0px;}
+ 100% { width:100%;}
+}
+.btn{
+    width:5%;
+    height: 10%;
+   cursor: pointer;
+}
+.Mainmap{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+.Mainmap#blur.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+.icon{
+    font-size: 10px;
+    padding: 12px 0;
+    cursor: pointer;
+    position: relative;
+}
+.tooltiptext{
+    visibility: hidden;
+    font-size: 10px;
+    position: absolute;
+    background-color: black;
+    color: #fff;
+    padding: 20px 10px 20px 30px;
+    width: 250px;
+    border-radius: 6px;
+    font-size: 12px;
+    text-align: left;
+    line-height: 15px;
+}
+.icon:hover .tooltiptext{
+    visibility: visible;
+    top: -5px;
+    right: 105%;
+}
+.color_info{
+    padding: 10px;
+}
+.inner_div{
+    padding: 4px;
+    display: flex;
+    align-items: center;
+}
+img{
+    width: 10px;
+    height: 15px;
+    margin:0 10px;
+}
+button{
+    background-color: whitesmoke ;
+    padding: 5px;
+    border: none;
+    color: #078798;
+    margin: 5px;
+    font-weight:bold;
+    cursor: pointer;
+}

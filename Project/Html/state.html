@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>States Of India</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <link rel="stylesheet" href="/Project/CSS/style.css" />
+    <link rel="stylesheet" href="/Project/CSS/styleExplore.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="/data/kerala_village_bnd.geojson"></script>
+    <script src="/data/GOA_village_bnd.geojson"></script>
+    <script src="/data/Sikkim_village_bnd.geojson"></script>
+</head>
+
+<body>
+    <main class="Mainmap" id="blur">
+        <!-- India -->
+        <div class="color1 largeHeading">gsdfgfd</div>
+        <div class="color2">
+            <div class="round heading ">INDIA</div>
+        </div>
+        <div class="color3 largeHeading">sgfgf</div>
+        <!-- Goa- Smallest State -->
+        <h3 class="heading smallHeading">GOA</h3>
+        <div class="states">
+            <div class="size map" id="goa"></div>
+            <div class="size2 box">
+                <p><b>Goa - the smallest state in India.</b> It lies along coastlines of the Arabian sea.
+                    Panaji is the capital of Goa.The area covered is 3,702 square kilometers. It is divided into
+                    two Revenue districts, namely North Goa and South Goa.
+                    Total population in 2021 is estimated to be 1.59 Million (15.9 Lakhs).
+                    In North Goa there are 248 villages and in South Goa is 163. Santa Cruz is largest village.
+                    Over a third of part is covered by forest. The state has highest per capita income in India.
+                    
+                </p>
+                <button class="explore" onclick="Div3()">EXPLORE</button>
+            </div>
+        </div>
+        <!-- Sikkim-Least Population -->
+        <h3 class="heading smallHeading">SIKKIM</h3>
+        <div class="states">
+            <div class="size2 box">
+                <p><b>Sikkim</b> is located in the northeastern part of the country, in the eastern Himalayas.
+                    Gangtok is the capital of Sikkim. It covers an area of 7096 sq kms (which accounts for 0.2%
+                    of the total area of India). The present population of Sikkim stands at 6.79 Lakhs.
+                   Total no. of villages are 452. Nathu lal pass is the key geographical feature.
+                   India's highest peak lies here - Kangchenjunga. GDP ranking is very poor. It lies second last 
+                   in GDP ranking in India. 
+                </p>
+                <button onclick="Div5()">EXPLORE</button>
+            </div>
+            <div class="size map" id="sikkim"></div>
+        </div>
+        <!-- Delhi-Capital of India -->
+        <h3 class="heading smallHeading">DELHI</h3>
+        <div class="states">
+            <div class="size map" id="delhi"></div>
+            <div class="size2 box">
+                <p><b>Delhi - the national capital of India</b> was built in 20th centuary.
+                    It covers an area of 1484 square kilometres of which 783 square kilometres is designated rural and
+                    700 square kilometres is urban. Delhi's 2021 population is now estimated at 31,181,376.
+                    It has total of 6,955 villages. It is leading commercial center of India.
+                </p>
+                <button onclick="Div1()">EXPLORE</button>
+            </div>
+        </div>
+        <!-- Rajasthan-Largest State -->
+        <h3 class="heading smallHeading">RAJASTHAN</h3>
+        <div class="states">
+            <div class="size2 box">
+                <p><b>Rajasthan - the largest state of India</b> located in north west India.
+                    It covers an area of 342,239 square kilometres (132,139 sq mi) or 10.4 per cent
+                    of the total geographical area of India. Jaipur is the capital of Rajasthan.
+                    According to UID, Rajasthan population in 2020 is estimated to be 81 million
+                    (8.1 Crores). Total no. of villages are 41,353. Phephana village is the largest village of Rajasthan.
+                </p>
+                <button onclick="Div2()">EXPLORE</button>
+            </div>
+            <div class="size map" id="rajasthan"></div>
+        </div>
+        <!-- UP-Largest Population -->
+        <h3 class="heading smallHeading">UTTAR PRADESH</h3>
+        <div class="states">
+            <div class="size map" id="up"></div>
+            <div class="size2 box">
+                <p><b>Uttar Pradesh - the most populous state</b> and the fourth largest state in India.
+                    Its capital is Lucknow, in the west-central part of the state. It covers an area of
+                    93,933 square miles (243,286 square km). Population of Uttar Pradesh state in current
+                    year is 241,066,874 (24.10 Crore). With an annual increase of over million people.
+                    In 1951, Population of Uttar Pradesh was only 60,274,000. Total no. of villages are 1,07,440.
+                    Gahmar is the largest village in India, situated in Uttar Pradesh.
+                </p>
+                <button onclick="Div4()">EXPLORE</button>
+            </div>
+        </div>
+        <!-- Chattisgarh-Least Developed -->
+        <h3 class="heading smallHeading">CHATTISGARH</h3>
+        <div class="states">
+            <div class="size2 box">
+                <p><b>Chattisgarh</b> is in the central part of India. Raipur is the capital of Chattisgarh.
+                    Total population estimated is 2.94 Cr. Area Covered is 1,36,034.
+                    There are 20,308 villages in total.
+                </p>
+                <button onclick="Div7()">EXPLORE</button>
+            </div>
+            <div class="size map" id="chattisgarh"></div>
+        </div>
+        <!-- Kerala-Most Developed -->
+        <h3 class="heading smallHeading">KERALA</h3>
+        <div class="states">
+            <div class="size map" id="kerala"></div>
+            <div class="size2 box">
+                <p><b>Kerala - most developed state in India</b> is situated in the southwestern end of the Indian
+                    subcontinent.
+                    Capital of Kerala is Thiruvananthapuram. Area covered by it is 38,863 square kilometers.
+                    Total population is 3,34,06,061.
+                    The state with the highest literacy rate in India, is noted for its achievements in education,
+                    health, gender equality, social justice, law and order. In addition to these, the state has the
+                    lowest infant mortality rate in the country. Total no. of villages are 1,364. Uliyazhathura is 
+                    the largest village in Kerala.
+                </p>
+                <button onclick="Div6()">EXPLORE</button>
+            </div>
+        </div>
+    </main>
+    <div id="div3_popup">
+        <div class="size3" id="goaExplore"></div>
+        <div class="color_info">
+            <div class="inner_div">
+                <img src="/images/red.JPG" >
+                <p> Urban</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/maroon.JPG">
+                <p> Rural</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/brown.JPG">
+                <p> Mining</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/yellow.JPG">
+                <p> Agriculture</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/green.JPG" >
+                <p> Forest</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/light_green2.JPG">
+                <p> Grass/Grazing</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/purple.JPG">
+                <p> Barren/wasteland</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/blue.JPG">
+                <p> Wetland/Water Body</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/dark_blue.JPG">
+                <p> River/Srteam/Canals</p>
+            </div>
+        </div>
+        <div class="icon"><i class="material-icons">info</i>
+            <span class="tooltiptext">
+                <ol type="i">
+                    <li>Select the boundaries option to view village boundaries</li>
+                    <li>Scroll up to zoom in</li>
+                    <li>Scroll down to zoom out</li>
+                </ol>
+            </span>
+        </div>
+        <button class="btn" onclick="Div3()"><i class="material-icons">close</i></button>
+    </div>
+    <div id="div5_popup">
+        <div class="size3" id="sikkimExplore"></div>
+        <div class="color_info">
+            <div class="inner_div">
+                <img src="/images/red.JPG" >
+                <p> Urban</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/maroon.JPG">
+                <p> Rural</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/brown.JPG">
+                <p> Mining</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/yellow.JPG">
+                <p> Agriculture</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/green.JPG">
+                <p> Forest</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/light_green2.JPG" >
+                <p> Grass/Grazing</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/purple.JPG">
+                <p> Barren/wasteland</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/blue.JPG" >
+                <p> Wetland/Water Body</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/dark_blue.JPG">
+                <p> River/Srteam/Canals</p>
+            </div>
+        </div>
+        <div class="icon"><i class="material-icons">info</i>
+            <span class="tooltiptext">
+                <ol type="i">
+                    <li>Select the boundaries option to view village boundaries</li>
+                    <li>Scroll up to zoom in</li>
+                    <li>Scroll down to zoom out</li>
+                </ol>
+            </span>
+        </div>
+        <button class="btn" onclick="Div5()"><i class="material-icons">close</i></button>
+    </div>
+    <div id="div1_popup">
+        <div class="size3" id="delhiExplore"></div>
+        <div class="color_info">
+            <div class="inner_div">
+                <img src="/images/red.JPG" >
+                <p> Urban</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/maroon.JPG">
+                <p> Rural</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/brown.JPG">
+                <p> Mining</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/yellow.JPG">
+                <p> Agriculture</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/green.JPG">
+                <p> Forest</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/light_green2.JPG">
+                <p> Grass/Grazing</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/purple.JPG">
+                <p> Barren/wasteland</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/blue.JPG">
+                <p> Wetland/Water Body</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/dark_blue.JPG">
+                <p> River/Srteam/Canals</p>
+            </div>
+        </div>
+       <div class="icon"><i class="material-icons">info</i>
+            <span class="tooltiptext">
+                <ol type="i">
+                    <li>Select the boundaries option to view village boundaries</li>
+                    <li>Scroll up to zoom in</li>
+                    <li>Scroll down to zoom out</li>
+                </ol>
+            </span>
+        </div>
+        <button class="btn" onclick="Div1()"><i class="material-icons">close</i></button>
+    </div>
+    <div id="div2_popup">
+        <div class="size3" id="rajasthanExplore"></div>
+        <div class="color_info">
+            <div class="inner_div">
+                <img src="/images/red.JPG">
+                <p> Urban</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/maroon.JPG">
+                <p> Rural</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/brown.JPG">
+                <p> Mining</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/yellow.JPG">
+                <p> Agriculture</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/green.JPG" >
+                <p> Forest</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/light_green2.JPG">
+                <p> Grass/Grazing</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/purple.JPG">
+                <p> Barren/wasteland</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/blue.JPG">
+                <p> Wetland/Water Body</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/dark_blue.JPG">
+                <p> River/Srteam/Canals</p>
+            </div>
+        </div>
+       <div class="icon"><i class="material-icons">info</i>
+            <span class="tooltiptext">
+                <ol type="i">
+                    <li>Select the boundaries option to view village boundaries</li>
+                    <li>Scroll up to zoom in</li>
+                    <li>Scroll down to zoom out</li>
+                </ol>
+            </span>
+        </div>
+        <button class="btn" onclick="Div2()"><i class="material-icons">close</i></button>
+    </div>
+    <div id="div4_popup">
+        <div class="size3" id="upExplore"></div>
+        <div class="color_info">
+            <div class="inner_div">
+                <img src="/images/red.JPG" st>
+                <p> Urban</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/maroon.JPG">
+                <p> Rural</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/brown.JPG">
+                <p> Mining</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/yellow.JPG">
+                <p> Agriculture</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/green.JPG" >
+                <p> Forest</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/light_green2.JPG">
+                <p> Grass/Grazing</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/purple.JPG">
+                <p> Barren/wasteland</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/blue.JPG">
+                <p> Wetland/Water Body</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/dark_blue.JPG">
+                <p> River/Srteam/Canals</p>
+            </div>
+        </div>
+       <div class="icon"><i class="material-icons">info</i>
+            <span class="tooltiptext">
+                <ol type="i">
+                    <li>Select the boundaries option to view village boundaries</li>
+                    <li>Scroll up to zoom in</li>
+                    <li>Scroll down to zoom out</li>
+                </ol>
+            </span>
+        </div>
+        <button class="btn" onclick="Div4()"><i class="material-icons">close</i></button>
+    </div>
+    <div id="div6_popup">
+        <div class="size3" id="keralaExplore"></div>
+        <div class="color_info">
+            <div class="inner_div">
+                <img src="/images/red.JPG">
+                <p> Urban</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/maroon.JPG">
+                <p> Rural</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/brown.JPG">
+                <p> Mining</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/yellow.JPG">
+                <p> Agriculture</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/green.JPG">
+                <p> Forest</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/light_green2.JPG">
+                <p> Grass/Grazing</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/purple.JPG">
+                <p> Barren/wasteland</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/blue.JPG">
+                <p> Wetland/Water Body</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/dark_blue.JPG">
+                <p> River/Srteam/Canals</p>
+            </div>
+        </div>
+       <div class="icon"><i class="material-icons">info</i>
+            <span class="tooltiptext">
+                <ol type="i">
+                    <li>Select the boundaries option to view village boundaries</li>
+                    <li>Scroll up to zoom in</li>
+                    <li>Scroll down to zoom out</li>
+                </ol>
+            </span>
+        </div>
+        <button class="btn" onclick="Div6()"><i class="material-icons">close</i></button>
+    </div>
+    <div id="div7_popup">
+        <div class="size3" id="chattisgarhExplore"></div>
+        <div class="color_info">
+            <div class="inner_div">
+                <img src="/images/red.JPG">
+                <p> Urban</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/maroon.JPG">
+                <p> Rural</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/brown.JPG">
+                <p> Mining</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/yellow.JPG">
+                <p> Agriculture</p>
+            </div> 
+            <div class="inner_div">
+                <img src="/images/green.JPG">
+                <p> Forest</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/light_green2.JPG">
+                <p> Grass/Grazing</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/purple.JPG">
+                <p> Barren/wasteland</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/blue.JPG">
+                <p> Wetland/Water Body</p>
+            </div>
+            <div class="inner_div">
+                <img src="/images/dark_blue.JPG">
+                <p> River/Srteam/Canals</p>
+            </div>
+        </div>
+        <div class="icon"><i class="material-icons">info</i>
+            <span class="tooltiptext">
+                <ol type="i">
+                    <li>Select the boundaries option to view village boundaries</li>
+                    <li>Scroll up to zoom in</li>
+                    <li>Scroll down to zoom out</li>
+                </ol>
+            </span>
+        </div>
+        <button class="btn" onclick="Div7()"><i class="material-icons">close</i></button>
+    </div>
+    <script src="/"></script>
+    <script src="/Project/JS/delhi.js"></script>
+    <script src="/Project/JS/delhiExplore.js"></script>
+    <script src="/Project/JS/chattisgarh.js"></script>
+    <script src="/Project/JS/chattisgarhExplore.js"></script>
+    <script src="/Project/JS/goa.js"></script>
+    <script src="/Project/JS/goaExplore.js"></script>
+    <script src="/Project/JS/Kerala.js"></script>
+    <script src="/Project/JS/keralaExplore.js"></script>
+    <script src="/Project/JS/rajasthanExplore.js"></script>
+    <script src="/Project/JS/Rajasthan.js"></script>
+    <script src="/Project/JS/Sikkim.js"></script>
+    <script src="/Project/JS/sikkimExplore.js"></script>
+    <script src="/Project/JS/UP.js"></script>
+    <script src="/Project/JS/upExplore.js"></script>
+</body>
+</html>

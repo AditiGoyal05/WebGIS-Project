@@ -1,0 +1,146 @@
+#div1_popup{
+    position: fixed;
+    top: 23%;
+    left: 23%;
+    padding: 10px;
+    background-color:whitesmoke;
+    width: 70%;
+    height: 65%;
+    transform: translate(-10%,-10%);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.50);
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    justify-content: space-between;
+}
+#div1_popup.active{
+    visibility: visible;
+    transition: 0.5s;
+    opacity: 1;
+}
+#div2_popup{
+    position: fixed;
+    top: 23%;
+    left: 23%;
+    padding: 10px;
+    background-color:whitesmoke;
+    width: 70%;
+    height: 65%;
+    transform: translate(-10%,-10%);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.50);
+    visibility: hidden;
+    transition: 0.5s;
+    opacity: 0;
+    display: flex;
+    justify-content: space-between;
+}
+#div2_popup.active{
+    visibility: visible;
+    transition: 0.5s;
+    opacity: 1;
+}
+#div3_popup{
+    position: fixed;
+    top: 23%;
+    left: 23%;
+    padding: 10px;
+    background-color:whitesmoke;
+    width: 70%;
+    height: 65%;
+    transform: translate(-10%,-10%);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.50);
+    visibility: hidden;
+    transition: 0.5s;
+    opacity: 0;
+    display: flex;
+    justify-content: space-between;
+}
+#div3_popup.active{
+    visibility: visible;
+    transition: 0.5s;
+    opacity: 1;
+}
+#div4_popup{
+    position: fixed;
+    top: 23%;
+    left: 23%;
+    padding: 10px;
+    background-color:whitesmoke;
+    width: 70%;
+    height: 65%;
+    transform: translate(-10%,-10%);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.50);
+    visibility: hidden;
+    transition: 0.5s;
+    opacity: 0;
+    display: flex;
+    justify-content: space-between;
+}
+#div4_popup.active{
+    visibility: visible;
+    transition: 0.5s;
+    opacity: 1;
+}
+#div5_popup{
+    position: fixed;
+    top: 23%;
+    left: 23%;
+    padding: 10px;
+    background-color:whitesmoke;
+    width: 70%;
+    height: 65%;
+    transform: translate(-10%,-10%);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.50);
+    visibility: hidden;
+    transition: 0.5s;
+    opacity: 0;
+    display: flex;
+    justify-content: space-between;
+}
+#div5_popup.active{
+    visibility: visible;
+    transition: 0.5s;
+    opacity: 1;
+}
+#div6_popup{
+    position: fixed;
+    top: 23%;
+    left: 23%;
+    padding: 10px;
+    background-color:whitesmoke;
+    width: 70%;
+    height: 65%;
+    transform: translate(-10%,-10%);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.50);
+    visibility: hidden;
+    transition: 0.5s;
+    opacity: 0;
+    display: flex;
+    justify-content: space-between;
+}
+#div6_popup.active{
+    visibility: visible;
+    transition: 0.5s;
+    opacity: 1;
+}
+#div7_popup{
+    position: fixed;
+    top: 23%;
+    left: 23%;
+    padding: 10px;
+    background-color:whitesmoke;
+    width: 70%;
+    height: 65%;
+    transform: translate(-10%,-10%);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.50);
+    visibility: hidden;
+    transition: 0.5s;
+    opacity: 0;
+    display: flex;
+    justify-content: space-between;
+}
+#div7_popup.active{
+    visibility: visible;
+    transition: 0.5s;
+    opacity: 1;
+}
